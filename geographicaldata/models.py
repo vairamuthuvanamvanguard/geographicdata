@@ -50,3 +50,8 @@ class MyUser(AbstractBaseUser):
     @property
     def is_staff(self):
         return self.is_admin
+
+class Shapefile(models.Model):
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    file = models.FileField(upload_to='shapefiles/')
+    uploaded_at = models.DateTimeField(auto_now_add=True)

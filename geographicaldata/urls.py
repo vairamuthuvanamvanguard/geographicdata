@@ -20,7 +20,11 @@ from . import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-     path('register', views.register, name='register'),
+    path('register', views.register, name='register'),
     path('login', views.login_view, name='login'),
+    path('upload_shapefile', views.upload_shapefile, name='upload_shapefile'),
+    path('get_shapefiles', views.user_shapefiles, name='user_shapefiles'),
+
+
 ]
 
