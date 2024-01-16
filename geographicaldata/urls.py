@@ -24,7 +24,7 @@ urlpatterns = [
     path('login', views.login_view, name='login'),
     path('upload_shapefile', views.upload_shapefile, name='upload_shapefile'),
     path('get_shapefiles', views.user_shapefiles, name='user_shapefiles'),
-
-
+    path('view_shapefile/<str:shapefile_id>/', views.view_shapefile, name='view_shapefile'),
+    path('download_shapefile/<str:shapefile_id>/', views.download_shapefile, name='download_shapefile'),
 ]
 
